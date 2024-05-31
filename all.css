@@ -253,9 +253,13 @@ body {
   text-decoration: none;
   font-size: 16px;
 }
+.menu li a:visited {
+  color: #000;
+}
 .menu li a:active {
   color: #c4e1ff;
 }
+
 .blank {
   height: 16px;
 }
@@ -417,15 +421,28 @@ body {
   width: 40px;
   border-radius: 4px;
 }
-.page .page-pressed {
-  background-color: #000;
-}
 .page .page-pressed a {
+  background-color: #000;
+  color: #fff;
+}
+.page a:visited {
+  color: #000;
+}
+.page a:hover {
+  background-color: #c4e1ff;
+  color: #fff;
+}
+
+.page .page-pressed a:visited {
   color: #fff;
 }
 .page ul li a {
   font-size: 24px;
   text-decoration: none;
+  display: block;
+  width: auto;
+  height: 40px;
+  border-radius: 4px;
 }
 
 .footer {
