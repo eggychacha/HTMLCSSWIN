@@ -315,6 +315,20 @@ body {
   align-items: center;
   height: 460px;
 }
+.quote .mark {
+  position: absolute;
+  z-index: 0;
+  width: 148px;
+  height: 8px;
+}
+.mark.m-1 {
+  left: 467px;
+  top: 94px;
+}
+.mark.m-2 {
+  left: 447px;
+  top: 140px;
+}
 .content-top {
   margin: 0 auto;
   display: flex;
@@ -323,11 +337,13 @@ body {
   align-items: center;
   margin-bottom: 24px;
 }
+
 .bottom-quote {
   transform: rotate(180deg);
   float: right;
 }
 .quote {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 670px;
@@ -337,6 +353,7 @@ body {
   height: 72px;
 }
 .quote p {
+  z-index: 1;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
@@ -393,6 +410,18 @@ body {
   .quote span {
     display: block;
   }
+  .quote .mark {
+    width: 108px;
+    height: 6px;
+  }
+  .mark.m-1 {
+    left: 118px;
+    top: 116px;
+  }
+  .mark.m-2 {
+    left: 118px;
+    top: 184px;
+  }
   .content-bottom {
     flex-direction: column;
     justify-content: center;
@@ -429,8 +458,9 @@ body {
   color: #000;
 }
 .page a:hover {
-  background-color: #c4e1ff;
+  background-color: #000;
   color: #fff;
+  transition: 0.5s;
 }
 
 .page .page-pressed a:visited {
@@ -472,6 +502,7 @@ body {
 }
 .footer-right ul li {
   background-color: #fff;
+  border-radius: 8px;
 }
 .footer-right ul li a {
   display: flex;
@@ -483,6 +514,19 @@ body {
   height: 72px;
   border: 1px solid #c1c1c1;
   border-radius: 8px;
+}
+.footer-right ul li a:hover {
+  background-color: #000;
+  transition: 0.5s;
+}
+.footer-right ul li a:hover p {
+  color: #fff;
+  transition: 0.5s;
+}
+/* hover時圖片濾鏡設定 */
+.footer-right ul li:not(.black) a:hover img {
+  filter: brightness(0) invert(1);
+  transition: 0.5s;
 }
 .footer-right .black {
   background-color: #000;
